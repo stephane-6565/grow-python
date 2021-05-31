@@ -9,13 +9,14 @@ import datetime
 import RPi.GPIO as GPIO
 from ltr559 import LTR559
 
-ltr559 = LTR559()
-
+## Variables
+ltr559 = LTR559() # Calling the light sensor
 light_value = 200 # Random number, need to test that
 
+
+## Main function
 def main():
     now = datetime.datetime.now()
-    
     while True:
         ltr559.update_sensor()
         lux = ltr559.get_lux()
