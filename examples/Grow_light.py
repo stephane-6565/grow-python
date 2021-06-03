@@ -22,9 +22,9 @@ def main():
         lux = ltr559.get_lux()
         lux < light_value         # while Lux value from light sensor is bellow the requested light value
         if 6 <= now.hour >= 20:   # only turn on light between 06h00 and 20h00.
-            print("light on")     # Turn on light (need to find a relay)
+            print("light on (lux = {})".format(lux))     # Turn on light (need to find a relay)
         else
-            print("light off")    # Turn off light (need to find a relay)
+            print("light off (lux = {})".format(lux))    # Turn off light (need to find a relay)
 
 if __name__ == "__main__":
     main()
